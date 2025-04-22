@@ -7,38 +7,48 @@
 
   <title>Ejemplo 1</title>
 
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/tabla.css">
+
 </head>
+
 <body>
-
-  <header>
-
+  <header class="main_header">
     <nav>
-  <a href="pages/sobre-mi.html"> Sobre mi </a>
-  <a href="pages/contacto.html"> Contacto </a>
-  <a href="pages/proyectos.html"> Proyectos </a>
-</nav>
+      <a href="pages/sobre-mi.html"> Sobre mi </a>
+      <a href="pages/contacto.html"> Contacto </a>
+      <a href="pages/proyectos.html"> Proyectos </a>
+  </nav>
   </header>
   
   <main>
+
+    <div>
+<button>Añadir usuario</button>
+<button>Editar usuario</button>
+
+    </div>
+
+
     <table>
       <tr>
-        <th>Nombre</th>
+        <th class="h-nombre">Nombre</th>
         <th>Gmail</th>
         <th>Teléfono</th>
       </tr>
       <tr>
         <td>Marcos</td>
-        <td>marcos@gmail.com</td>
-        <td><img/> <span>187236213</span></td>
+        <td class="td-email">marcos@gmail.com</td>
+        <td><span>187236213</span></td>
       </tr>
         <tr>
-        <td>Rebeca</td>
-        <td>rebeca@gmail.com</td>
+        <td><p class="n_rebeca">Rebeca</p></td>
+        <td class="td-email td-bold">rebeca@gmail.com</td>
         <td>1581653512</td>
       </tr>
         <tr>
           <td>Alexia</td>
-          <td>alexia@gmail.com</td>
+          <td class="td-email">alexia@gmail.com</td>
           <td>813513213</td>
         </tr>
        

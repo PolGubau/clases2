@@ -1,0 +1,56 @@
+/* mobile */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgoldenrodyellow;
+}
+
+.main_header {
+  padding: 10px;
+  margin: 15px;
+  background-color: lightcoral;
+  border-radius: 25px;
+  border: black 1px solid;
+  box-shadow: 5px 4px 2px;
+  display: none;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid black;
+  font-size: 12px;
+
+  animation-name: bg_change;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+button:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+button:focus {
+  box-shadow: 2px 2px 2px;
+}
+
+@keyframes bg_change {
+  0% {
+    opacity: 0;
+    margin-left: 40px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+/* pc */
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+  .main_header {
+    display: block;
+  }
+}

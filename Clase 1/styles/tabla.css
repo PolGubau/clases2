@@ -1,0 +1,18 @@
+.td-email {
+  background-color: grey;
+  color: brown;
+}
+.td-bold {
+  font-weight: bold;
+}
+
+.h-nombre {
+  background-color: yellow;
+}
+
+.n_rebeca {
+  color: blue;
+  padding: 5px;
+  margin: 0;
+  background-color: lightblue;
+}
