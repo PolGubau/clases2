@@ -1,8 +1,14 @@
 /* mobile */
+
+* {
+  border: 0.5px solid black;
+}
 body {
   margin: 0;
   padding: 0;
   background-color: lightgoldenrodyellow;
+
+  display: grid;
 }
 
 .main_header {
@@ -19,8 +25,6 @@ button {
   border-radius: 8px;
   border: 1px solid black;
   font-size: 12px;
-
-  animation-name: bg_change;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
