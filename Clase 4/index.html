@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
     <section class="seccion_calculadora">
-        <input class="pantalla" type="number" />
+        <input class="pantalla" type="number" id="pantalla" />
 
         <section class="fondo_calculadora">
             <table class="tabla_calculadora">
                 <tr>
                     <td>
-                        <button class="tecla">7</button>
+                        <button class="tecla" id="num7">7</button>
                     </td>
                     <td><button class="tecla">8</button></td>
                     <td><button class="tecla">9</button></td>
@@ -59,5 +59,7 @@
             </tr>
         </table>
     </section>
+
+    <script src="./javascript.js"/>
 </body>
 </html>
