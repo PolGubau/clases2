@@ -30,7 +30,8 @@ const resumenResultado = document.getElementById("resumen_resultado");
 
 // Lógica (funciones)
 
-function showError(){
+function showError(mensajeDelError){
+		alertMessage.textContent = mensajeDelError
 	customAlert.classList.remove("d_none");
 }
 function hideError(){
@@ -131,10 +132,8 @@ function clickAlIgualValidado(){
   // casos de error
 
   if(operador1.textContent === ""){
-		showError()
-		alertMessage.textContent = "Debes introducir la primera cifra"
-			// alert("Debes introducir la primera cifra");
-		} else if(pantalla.value === ""){
+		showError("Debes introducir la primera cifra")
+ 		} else if(pantalla.value === ""){
       alert("Debes introducir la segunda cifra");
     } else{
     // en caso ok
