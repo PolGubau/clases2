@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="d_none alert" id="alert">
+
+        CUIDADO
+        <button id="cerrar-alert">X</button>
+        <span id="alert-msg"></span>
+
+    </div>
+
+    <section class="seccion_calculadora">
+        <input class="pantalla" type="number" id="pantalla" />
+
+        <section class="fondo_calculadora">
+            <table class="tabla_calculadora">
+                <tr>
+                    <td>
+                        <button class="tecla" id="num7">7</button>
+                    </td>
+                    <td><button class="tecla" id="num8">8</button></td>
+                    <td><button class="tecla" id="num9">9</button></td>
+                    <td><button class="tecla simbolo" id="multiplica">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="tecla" id="num4">4</button></td>
+                    <td><button class="tecla" id="num5">5</button></td>
+                    <td><button class="tecla" id="num6">6</button></td>
+                    <td><button class="tecla simbolo" id="divide">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="tecla" id="num1">1</button></td>
+                    <td><button class="tecla" id="num2">2</button></td>
+                    <td><button class="tecla" id="num3">3</button></td>
+                    <td><button class="tecla simbolo" id="suma">+</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="tecla simbolo_igual" id="igual">=</button>
+                    </td> <!--colspan para duplicar tamaño de la columna-->
+                    <td><button class="tecla" id="num0">0</button></td>
+                    <td><button class="tecla simbolo" id="resta">-</button></td>
+                </tr>
+            </table>
+        </section>
+
+    </section>
+
+    <section class="resumen">
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    <span id="resumen_operador1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><span id="resumen_simbolo"></span></td>
+                <td>
+                    <span id="resumen_operador2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="resultado" id="resumen_resultado"></td>
+            </tr>
+        </table>
+    </section>
+
+
+    <script src="./javascript.js" />
+
+</body>
+
+</html>
