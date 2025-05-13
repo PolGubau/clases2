@@ -1,0 +1,41 @@
+.seccion_datos_tabla{
+    background-color: rgb(223, 137, 137);
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.tabla_datos th{
+    border: black 1px solid;
+    padding: 10px;
+
+}
+
+.tabla_datos{
+    border-spacing: 0;
+}
+
+.seccion_principal{
+    display: flex;
+    gap: 10px;
+}
+
+.form_colocacion{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form_colocacion label{
+    margin-top: 10px;
+}
+
+.seccion_formulario{
+    background-color: rgb(117, 223, 117);
+    padding: 10px;
+}
+
+.boton_formulario{
+    margin-top: 40px;
+}

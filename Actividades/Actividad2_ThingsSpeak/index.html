@@ -19,17 +19,18 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main>
-    <section>
+  <main class="seccion_principal">
+    <section class="seccion_datos_tabla">
 
       <header>
         <button id="cargar-datos">Cargar datos</button>
       </header>
 
-      <table>
+      <table class="tabla_datos">
         <thead>
           <tr>
             <th>CO2 (ppm)</th>
@@ -46,8 +47,8 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
       </table>
 
     </section>
-    <section>
-      <form id="form-crear">
+    <section class="seccion_formulario">
+      <form class="form_colocacion" id="form-crear">
         <label for="co2">CO2</label>
         <input id="co2" type="number" value="0" />
 
@@ -63,7 +64,7 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
         <label for="viento">Viento</label>
         <input id="viento" type="number" value="0" />
 
-        <button type="submit">
+        <button type="submit" class="boton_formulario">
           Enviar
         </button>
 
