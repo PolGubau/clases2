@@ -1,5 +1,9 @@
+body{
+    margin: 0;
+}
+
 .seccion_datos_tabla{
-    background-color: rgb(223, 137, 137);
+    background-color: rgb(243, 203, 203);
     padding: 10px;
     display: flex;
     gap: 10px;
@@ -38,4 +42,49 @@
 
 .boton_formulario{
     margin-top: 40px;
+}
+
+.header_cabecera{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 171, 213);
+    color: rgb(4, 0, 255);
+    padding: 10px;
+}
+
+.header_cabecera h1, h2{
+    margin: 0;
+}
+
+.header_cabecera h2{
+    color: rgb(41, 43, 146);
+}
+
+.boton_cargar_datos{
+    background-color: #add2df;
+    border:2px solid #008CBA;
+    border-radius: 15px;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.boton_cargar_datos:hover{
+    background-color: #008CBA;
+    color:white;
+    cursor: pointer;
+}
+
+.boton_cargar_datos:active {
+  background-color: #7bf734;
+  box-shadow: 0 5px #666;
+  color: black;
+  transform: translateY(4px);
+}
+
+th{
+    background-color: rgb(194, 150, 96);
 }

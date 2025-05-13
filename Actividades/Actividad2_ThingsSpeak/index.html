@@ -23,11 +23,15 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
 </head>
 
 <body>
+  <header class="header_cabecera">
+    <h1>Tecnologías Emergentes</h1>
+    <h2>Actividad 2: Integración de sistemas IoT</h2>
+  </header>
   <main class="seccion_principal">
     <section class="seccion_datos_tabla">
 
       <header>
-        <button id="cargar-datos">Cargar datos</button>
+        <button class="boton_cargar_datos" id="cargar-datos">Cargar datos</button>
       </header>
 
       <table class="tabla_datos">
@@ -49,19 +53,19 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
     </section>
     <section class="seccion_formulario">
       <form class="form_colocacion" id="form-crear">
-        <label for="co2">CO2</label>
+        <label for="co2">CO2 (ppm)</label>
         <input id="co2" type="number" value="0" />
 
-        <label for="ruido">Ruido</label>
+        <label for="ruido">Ruido (dB)</label>
         <input id="ruido" type="number" value="0" />
 
-        <label for="luminosidad">Luminosidad</label>
+        <label for="luminosidad">Luminosidad (lux)</label>
         <input id="luminosidad" type="number" value="0" />
 
-        <label for="presion">Presión</label>
+        <label for="presion">Presión (hPa)</label>
         <input id="presion" type="number" value="0" />
 
-        <label for="viento">Viento</label>
+        <label for="viento">Viento (km/h)</label>
         <input id="viento" type="number" value="0" />
 
         <button type="submit" class="boton_formulario">
@@ -74,7 +78,7 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
 
 
 
-  <script src="script.js" />
+  <script src="script.js"></script>
 
 
 </body>
