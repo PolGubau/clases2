@@ -1,0 +1,77 @@
+<!-- 
+
+WRITE - AÑADE VALORES: https://api.thingspeak.com/update?api_key=1PLGNBXR566MRRPI&field1=0 
+
+READ: https://api.thingspeak.com/channels/2959181/feeds.json?api_key=WNINQHWETFWU00BF 
+
+Read a channel Field:
+GET https://api.thingspeak.com/channels/2959181/fields/1.json?api_key=WNINQHWETFWU00BF&results=2
+
+Read Channel Status Updates:
+GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU00BF
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <section>
+
+      <header>
+        <button id="cargar-datos">Cargar datos</button>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>CO2 (ppm)</th>
+            <th>Ruido (dB)</th>
+            <th>Luminosidad (lux)</th>
+            <th>Presión (hPa)</th>
+            <th>Viento (km/h)</th>
+          </tr>
+        </thead>
+
+        <tbody id="cuerpo-tabla">
+          <!--  -->
+        </tbody>
+      </table>
+
+    </section>
+    <section>
+      <form id="form-crear">
+        <label for="co2">CO2</label>
+        <input id="co2" type="number" value="0" />
+
+        <label for="ruido">Ruido</label>
+        <input id="ruido" type="number" value="0" />
+
+        <label for="luminosidad">Luminosidad</label>
+        <input id="luminosidad" type="number" value="0" />
+
+        <label for="presion">Presión</label>
+        <input id="presion" type="number" value="0" />
+
+        <label for="viento">Viento</label>
+        <input id="viento" type="number" value="0" />
+
+        <button type="submit">
+          Enviar
+        </button>
+
+      </form>
+    </section>
+  </main>
+
+
+</body>
+
+</html>
