@@ -1,6 +1,7 @@
 <!-- 
 
-WRITE - AÑADE VALORES: https://api.thingspeak.com/update?api_key=1PLGNBXR566MRRPI&field1=0 
+WRITE - AÑADE VALORES: 
+https://api.thingspeak.com/update?api_key=1PLGNBXR566MRRPI&field1=0
 
 READ: https://api.thingspeak.com/channels/2959181/feeds.json?api_key=WNINQHWETFWU00BF 
 
@@ -35,7 +36,7 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
       </header>
 
       <table class="tabla_datos">
-        <thead>
+        <thead class="tabla_datos_head">
           <tr>
             <th>CO2 (ppm)</th>
             <th>Ruido (dB)</th>
@@ -47,6 +48,7 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
 
         <tbody id="cuerpo-tabla">
           <!--  -->
+
         </tbody>
       </table>
 
@@ -54,19 +56,19 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
     <section class="seccion_formulario">
       <form class="form_colocacion" id="form-crear">
         <label for="co2">CO2 (ppm)</label>
-        <input id="co2" type="number" value="0" />
+        <input id="co2" type="number" value="0" min="0" required />
 
         <label for="ruido">Ruido (dB)</label>
-        <input id="ruido" type="number" value="0" />
+        <input id="ruido" type="number" value="0" min="0" required />
 
         <label for="luminosidad">Luminosidad (lux)</label>
-        <input id="luminosidad" type="number" value="0" />
+        <input id="luminosidad" type="number" value="0" min="0" required />
 
         <label for="presion">Presión (hPa)</label>
-        <input id="presion" type="number" value="0" />
+        <input id="presion" type="number" value="0" min="0" required />
 
         <label for="viento">Viento (km/h)</label>
-        <input id="viento" type="number" value="0" />
+        <input id="viento" type="number" value="0" min="0" required />
 
         <button type="submit" class="boton_formulario">
           Enviar
@@ -78,7 +80,8 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
 
 
 
-  <script src="script.js"></script>
+  <script src="scripts/constants.js"></script>
+  <script src="scripts/main.js"></script>
 
 
 </body>
