@@ -11,17 +11,46 @@ body{
     margin: 0;
 }
 
+.header_cabecera {
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Degradado azul */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 5px solid rgb(113, 146, 253); /* línea sutil decorativa */
+  text-shadow: 4px 5px 20px black;
+}
+
+.header_cabecera h1 {
+  font-size: 2.8rem;
+  letter-spacing: 10px;
+}
+
+.header_cabecera h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  opacity: 0.9;
+}
+
+.main_principal{
+    background: linear-gradient(to bottom, #324f7a, #93b5bd);
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    width: 100%;
+}
 
 .seccion_datos_tabla{
-    background-color: rgb(243, 203, 203);
     padding: 10px;
     display: flex;
     gap: 10px;
     flex-direction: column;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .tabla_datos th{
-    border: black 1px solid;
+    border: rgb(0, 0, 0) 2px solid;
     padding: 10px;
 }
 
@@ -35,12 +64,7 @@ body{
 .table_row_centrada td{
     text-align: center;
 }
-.seccion_principal{
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    gap: 10px;
-    width: 100%;
-}
+
 
 .form_colocacion{
     display: flex;
@@ -55,35 +79,22 @@ body{
 }
 
 .seccion_formulario{
-    background-color: rgb(117, 223, 117);
+    background: linear-gradient(to top right, #6d61da, #2c89a5);
+    border-radius: 6px;
     padding: 10px;
 }
 
-
+label{
+    color: white;
+}
 
 .boton_formulario{
     margin-top: 40px;
 }
 
-.header_cabecera{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(240, 171, 213);
-    color: rgb(4, 0, 255);
-    padding: 10px;
-}
-
-.header_cabecera h1, h2{
-    margin: 0;
-}
-
-.header_cabecera h2{
-    color: rgb(41, 43, 146);
-}
-
 .boton_cargar_datos{
-    background-color: #add2df;
-    border:2px solid #008CBA;
+    background-color: #77e469;
+    border:2px solid #171150;
     border-radius: 15px;
     color: black;
     padding: 10px 15px;
@@ -106,6 +117,33 @@ body{
   transform: translateY(4px);
 }
 
-th{
-    background-color: rgb(194, 150, 96);
+.boton_enviar_datos{
+    background-color: #77e469;
+    border:2px solid #171150;
+    border-radius: 15px;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
 }
+
+.boton_enviar_datos:hover{
+    background-color: #008CBA;
+    color:white;
+    cursor: pointer;
+}
+
+.boton_enviar_datos:active {
+  background-color: #7bf734;
+  box-shadow: 0 5px #666;
+  color: black;
+  transform: translateY(4px);
+}
+
+th{
+    background-color: rgb(41, 85, 165);
+}
+
