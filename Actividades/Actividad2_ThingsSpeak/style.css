@@ -147,3 +147,18 @@ th{
     background-color: rgb(41, 85, 165);
 }
 
+@media only screen and (max-width: 600px) {
+    .main_principal{
+        background: linear-gradient(to bottom, #324f7a, #93b5bd);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .seccion_formulario{
+        margin-bottom: 50px;
+    }
+
+    body {
+        min-width: max-content;
+    }
+}
