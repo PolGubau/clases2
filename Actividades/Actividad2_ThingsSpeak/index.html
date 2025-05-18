@@ -35,23 +35,26 @@ GET https://api.thingspeak.com/channels/2959181/status.json?api_key=WNINQHWETFWU
         <button class="boton_cargar_datos" id="cargar-datos">Cargar datos</button>
       </header>
 
-      <table class="tabla_datos">
-        <thead class="tabla_datos_head">
-          <tr>
-            <th>CO2 (ppm)</th>
-            <th>Ruido (dB)</th>
-            <th>Luminosidad (lux)</th>
-            <th>Presión (hPa)</th>
-            <th>Viento (km/h)</th>
-          </tr>
-        </thead>
+      <div class="contenedor_tabla">
 
-        <tbody id="cuerpo-tabla">
-          <!--  -->
-
-        </tbody>
-      </table>
-
+        <table class="tabla_datos">
+          <thead class="tabla_datos_head">
+            <tr>
+              <th>CO2 (ppm)</th>
+              <th>Ruido (dB)</th>
+              <th>Luminosidad (lux)</th>
+              <th>Presión (hPa)</th>
+              <th>Viento (km/h)</th>
+            </tr>
+          </thead>
+          
+          <tbody id="cuerpo-tabla">
+            <!--  -->
+            
+          </tbody>
+        </table>
+      </div>
+        
     </section>
     <section class="seccion_formulario">
       <form class="form_colocacion" id="form-crear">

@@ -9,6 +9,7 @@ h1,h2,h3,h4,p{
 
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 .header_cabecera {
@@ -48,7 +49,9 @@ body{
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
-
+.contenedor_tabla{
+    overflow-x: auto;
+}
 .tabla_datos th{
     border: rgb(0, 0, 0) 2px solid;
     padding: 10px;
@@ -56,6 +59,7 @@ body{
 
 .tabla_datos{
     border-spacing: 0;
+    max-width: 80vw;
 }
 .tabla_datos_head{
     position: sticky;
@@ -154,11 +158,29 @@ th{
         flex-direction: column-reverse;
     }
 
+
+    .header_cabecera {
+        background: linear-gradient(to right, #1e3c72, #2a5298); /* Degradado azul */
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-bottom: 5px solid rgb(113, 146, 253); /* línea sutil decorativa */
+        text-shadow: 4px 5px 20px black;
+      }
+      
+      .header_cabecera h1 {
+        font-size: 1.2rem;
+        letter-spacing: normal;
+      }
+      
+      .header_cabecera h2 {
+        font-size: 1rem;
+        letter-spacing: normal;
+      }
+
     .seccion_formulario{
         margin-bottom: 50px;
     }
 
-    body {
-        min-width: max-content;
-    }
 }
