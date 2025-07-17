@@ -1,0 +1,18 @@
+
+body{
+  margin: 0;
+}
+button{
+  font-size: 0.8em;
+}
+
+.contenido{
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 5em;
+}
+
