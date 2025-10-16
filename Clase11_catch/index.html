@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="encabezado">
+    <header class="encabezado">
         <h1>Listado de Películas</h1>
         <h2>De mi servidor</h2>
-    </div>
-    
-    <form class="formulario">
-        <label for="checkbox_filtrar_finalizadas">Mostrar solo películas finalizadas</label>
-        <input type="checkbox" id="checkbox_filtrar_finalizadas">
-        <label for="checkbox_filtrar_2016">De 2016 en adelante</label>
-        <input type="checkbox" id="checkbox_filtrar_2016">
-    </form>
+    </header>
 
-    <ul id="listadoPeliculas">
 
-    </ul>
+    <main class="contenido">
+        <div class="principal" id="principal">
+            <ul id="listadoPeliculas" class="listado_peliculas"></ul>
+        </div>
+        <div class="filtros">
+            <p>Filtros de las peliculas</p>
+            <form class="formulario">
 
-    <!-- <script src="./javascript.js"></script> -->
+
+
+
+                <div>
+                    <input type="checkbox" id="checkbox_filtrar_ingles"><label for="checkbox_filtrar_ingles">Solo
+                        películas en Inglés</label>
+                </div>
+
+
+                <div>
+                    <input type="checkbox" id="checkbox_filtrar_2016">
+                    <label for="checkbox_filtrar_2016">De 2016 en adelante</label>
+                </div>
+
+
+
+            </form>
+        </div>
+
+
+    </main>
     <script src="./javascript.js"></script>
 </body>
-</html>
 
+</html>

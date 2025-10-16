@@ -1,0 +1,1 @@
+poner un input que escribes un numero en los filtros, y al darle a enviar (O AL ENTER) te filtra las peliculas que tienen una valoración mayor que ese numero.
