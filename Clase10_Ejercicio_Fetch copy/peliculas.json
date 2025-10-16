@@ -1,0 +1,6 @@
+[
+{"titulo":"Interstellar", "autor":"Cristopher Nollan", "fecha": 2019, "isFinalizada":false},
+{"titulo": "Batman", "autor": "Pedro Garcia", "fecha": 2013, "isFinalizada":false},
+{"titulo": "Spiderman", "autor": "Laura Poitras", "fecha": 2015, "isFinalizada":true},
+{"titulo": "Lobezno", "autor": "Irene Fernandez", "fecha": 2023, "isFinalizada":true}
+]

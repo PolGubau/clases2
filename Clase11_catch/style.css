@@ -1,0 +1,20 @@
+.pelicula_item{
+    display: flex;
+    gap: 20px;
+}
+
+.isFinalizada_item{
+    margin: 0;
+    font-size: small;
+}
+
+.pelicula_moderna_item{
+    margin: 0;
+    font-size: small;
+}
+
+.encabezado{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
