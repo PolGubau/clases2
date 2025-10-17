@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Listado de Películas</h1>
+        <h2>De mi servidor</h2>
+    </header>
+
+
+    <main class="contenido">
+        <div class="principal" id="principal">
+            <ul id="listadoPeliculas" class="listado_peliculas"></ul>
+        </div>
+        <div class="filtros">
+            <p>Filtros de las peliculas</p>
+            <div class="conjunto_inputs">
+
+                <div>
+                    <input type="checkbox" id="checkbox_filtrar_ingles">
+                    <label for="checkbox_filtrar_ingles">Solo
+                        películas en Inglés</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="checkbox_filtrar_2016">
+                    <label for="checkbox_filtrar_2016">De 2016 en adelante</label>
+                </div>
+
+                <form id="formulario_filtro_minimo_anios">
+                    <label for="input_filtrar_anios">Año mínimo:</label>
+                    <input type="number" placeholder="2015" id="input_filtrar_anios">
+                    <button type="submit">Filtrar</button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./javascript.js"></script>
+</body>
+
+</html>
