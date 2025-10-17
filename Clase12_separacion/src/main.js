@@ -1,6 +1,6 @@
 // const RUTA_PELICULAS = "https://jsonfakery.com/movies/paginated";
-const RUTA_PELICULAS = "./peliculas.json";
 
+import { constantes } from "./constants.js"
 
 const listadoPeliculas = document.getElementById("listadoPeliculas");
 const checkbox_filtrar_ingles = document.getElementById("checkbox_filtrar_ingles");
@@ -90,7 +90,7 @@ function filtraPeliculas() {
         });
     }
 
-    if (inputFiltrarAnios.value !== ""){
+    if (inputFiltrarAnios.value !== "") {
         const valorInputFiltrarAnios = Number(inputFiltrarAnios.value);
         peliculasFiltradas = peliculasFiltradas.filter(pelicula => {
             let releaseDate = new Date(pelicula.release_date);
@@ -102,29 +102,17 @@ function filtraPeliculas() {
     return peliculasFiltradas;
 }
 
+
+
+
+
 checkbox_filtrar_ingles.addEventListener("change", renderizaPeliculas)
 checkboxFiltrar2016.addEventListener("change", renderizaPeliculas)
-formularioFiltroMinimoAnios.addEventListener("submit", function(event){
+formularioFiltroMinimoAnios.addEventListener("submit", function (event) {
     event.preventDefault();
     renderizaPeliculas();
 });
 
-/*IGUAL QUE LINEA ANTERIOR PERO CON OTRA SINTAXIS
-formularioFiltroMinimoAnios.addEventListener("submit", event => {
-    event.preventDefault();
-    renderizaPeliculas();
-});
-*/
 
-/*ALTERNATIVA A LA LINEA ANTERIOR
-inputFiltrarAnios.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); //evita que enviar el formulario y recargar la pagina antes de que se vea el resultado. esto sucede porque el input está dentro de un <form>
-        console.log("Enter presionado");
-        renderizaPeliculas();
-    }
-  });
-*/
-
-cargarPeliculas(RUTA_PELICULAS);
+cargarPeliculas(constantes.ruta_peliculas);
 
