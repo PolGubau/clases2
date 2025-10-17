@@ -1,118 +1,32 @@
-// const RUTA_PELICULAS = "https://jsonfakery.com/movies/paginated";
-
 import { constantes } from "./constants.js"
+import { renderizaPeliculas } from "./renderizar.js";
 
-const listadoPeliculas = document.getElementById("listadoPeliculas");
 const checkbox_filtrar_ingles = document.getElementById("checkbox_filtrar_ingles");
 const checkboxFiltrar2016 = document.getElementById("checkbox_filtrar_2016");
-const principal = document.getElementById("principal")
-const inputFiltrarAnios = document.getElementById("input_filtrar_anios");
 const formularioFiltroMinimoAnios = document.getElementById("formulario_filtro_minimo_anios");
 
 let peliculas = [];
 
 
-function cargarPeliculas(directorio) {
-    fetch(directorio)
-        .then(data => data.json())
-        .then(dataPeliculas => {
-            peliculas = dataPeliculas.data;
-            renderizaPeliculas();
-        }).catch(e => {
-            const mensajeError = document.createElement("p")
-            mensajeError.textContent = "Ha ocurrido un error, prueba de nuevo :("
-            mensajeError.classList.add("mensaje_error")
-            principal.appendChild(mensajeError)
-
-            console.log("Ha pasado algo")
-        }).finally(
-            () => {
-                console.log("Operación terminada")
-            }
-        )
-}
-
-
-function renderizaPeliculas() {
-    listadoPeliculas.innerHTML = "";
-    const peliculasFiltradas = filtraPeliculas();
-    peliculasFiltradas.forEach(pelicula => {
-        renderizarUnaPelicula(pelicula);
+function main(){
+    cargarPeliculas(constantes.ruta_peliculas).then(peliculasCargadas => {
+        renderizaPeliculas(peliculasCargadas);
+        peliculas = peliculasCargadas;
     });
 }
 
 
-function renderizarUnaPelicula(pelicula) {
-    const nodoPelicula = document.createElement("li");
-
-    const caratula = document.createElement("img")
-    caratula.src = pelicula.poster_path;
-    caratula.classList.add("pelicula_poster")
-    caratula.alt = "Portada de: " + pelicula.original_title;
-    nodoPelicula.appendChild(caratula)
-
-
-    const peliculaHeader = document.createElement("header")
-    peliculaHeader.classList.add("pelicula_header")
-
-
-    const nombrePelicula = document.createElement("h2");
-    nombrePelicula.textContent = pelicula.original_title;
-    peliculaHeader.appendChild(nombrePelicula)
-
-
-    const mediaPelicula = document.createElement("strong");
-    mediaPelicula.textContent = pelicula.vote_average;
-    peliculaHeader.appendChild(mediaPelicula)
-
-
-    nodoPelicula.appendChild(peliculaHeader)
-
-
-    listadoPeliculas.appendChild(nodoPelicula)
+function triggerRenderizaPeliculas(){
+    renderizaPeliculas(peliculas);
 }
 
 
-function filtraPeliculas() {
-    const tieneFiltroIngles = checkbox_filtrar_ingles.checked;
-    const tieneFiltro2016 = checkboxFiltrar2016.checked;
-    let peliculasFiltradas = peliculas;
-
-    if (tieneFiltroIngles) {
-        peliculasFiltradas = peliculasFiltradas.filter(pelicula => pelicula.original_language === "en");
-    }
-
-    if (tieneFiltro2016) {
-        peliculasFiltradas = peliculasFiltradas.filter(pelicula => {
-            let releaseDate = new Date(pelicula.release_date);
-            let year = releaseDate.getFullYear();
-            return year >= 2016;
-        });
-    }
-
-    if (inputFiltrarAnios.value !== "") {
-        const valorInputFiltrarAnios = Number(inputFiltrarAnios.value);
-        peliculasFiltradas = peliculasFiltradas.filter(pelicula => {
-            let releaseDate = new Date(pelicula.release_date);
-            let year = releaseDate.getFullYear();
-            return year >= valorInputFiltrarAnios;
-        });
-    }
-
-    return peliculasFiltradas;
-}
-
-
-
-
-
-checkbox_filtrar_ingles.addEventListener("change", renderizaPeliculas)
-checkboxFiltrar2016.addEventListener("change", renderizaPeliculas)
+checkbox_filtrar_ingles.addEventListener("change", triggerRenderizaPeliculas)
+checkboxFiltrar2016.addEventListener("change", triggerRenderizaPeliculas)
 formularioFiltroMinimoAnios.addEventListener("submit", function (event) {
     event.preventDefault();
-    renderizaPeliculas();
+    triggerRenderizaPeliculas();
 });
 
 
-cargarPeliculas(constantes.ruta_peliculas);
-
+main();
