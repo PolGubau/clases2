@@ -1,0 +1,31 @@
+.contenido_principal{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.tabla{
+    border: 2px black solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    th, td{
+        border: 1px grey solid;
+    }
+
+    thead th{
+        background-color: red;
+        border-bottom: 2px black solid;
+        border-right: 2px black solid;
+    }
+
+    caption{
+        font-size: 2em;
+        padding-bottom: 10px;
+    };
+}
+
+.footer_pagina_principal{
+    padding: 10px;
+}
