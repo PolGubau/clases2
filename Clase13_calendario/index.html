@@ -10,40 +10,26 @@
 </head>
 
 <body>
-    <dialog close id="modalAgregarEntrada" class="modal_agregar_entrada">
+    <dialog id="modalAgregarEntrada" class="modal_agregar_entrada">
 
-
-        <form>
+        <form id="agregarForm">
 
             <div>
                 <label for="inputFechaAgregarEntrada">Fecha</label>
-                <input type="datetime-local" id="inputFechaAgregarEntrada" />
+                <input required type="datetime-local" id="inputFechaAgregarEntrada" />
             </div>
 
             <div>
                 <label for="inputTextoAgregarEntrada">Texto</label>
-                <input id="inputTextoAgregarEntrada" />
+                <input required id="inputTextoAgregarEntrada" />
             </div>
 
-            <ul class="lista_colores">
-                <li>
-                    <button type="button" class="bn_blanco" id="colorBlancoAgregar">
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="bn_rojo" id="colorRojoAgregar">
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="bn_naranja" id="colorNaranjaAgregar">
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="bn_verde" id="colorVerdeAgregar">
-                    </button>
-                </li>
-
-            </ul>
+            <div>
+                <label for="inputColorAgregarEntrada">Color</label>
+                <input type="color" list="listaColores" id="inputColorAgregarEntrada" value="#000000">
+                <datalist id="listaColores">
+                </datalist>
+            </div>
 
             <button type="submit">
                 Agregar Entrada
@@ -102,7 +88,11 @@
         <button id="botonAgregarEntrada">Agregar Entrada</button>
     </footer>
 
-    <script src="./src/agregarEntrada.js" />
+    <!-- zona de juego -->
+<ul id="entradasProvisionales"></ul>
+
+
+    <script src="./src/main.js" type="module" />
 </body>
 
 </html>
