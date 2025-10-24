@@ -1,0 +1,37 @@
+.modal_agregar_entrada{
+  background-color: lightcyan;
+  width: 500px;
+  height: 400px;
+
+  .boton_cerrar{
+    border-radius: 9999px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+  .lista_colores{
+    list-style: none;
+    gap:10px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    button{
+      width: 50px;
+      height: 50px;
+    }
+    .bn_naranja{
+      background-color: orange;
+    }
+    .bn_verde{
+      background-color: green;
+    }
+    .bn_rojo{
+      background-color: red;
+    }
+    .bn_blanco{
+      background-color: white;
+    }
+  }
+}

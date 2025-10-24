@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/modales.css" />
 </head>
+
 <body>
-   
+    <dialog close id="modalAgregarEntrada" class="modal_agregar_entrada">
+
+
+        <form>
+
+            <div>
+                <label for="inputFechaAgregarEntrada">Fecha</label>
+                <input type="datetime-local" id="inputFechaAgregarEntrada" />
+            </div>
+
+            <div>
+                <label for="inputTextoAgregarEntrada">Texto</label>
+                <input id="inputTextoAgregarEntrada" />
+            </div>
+
+            <ul class="lista_colores">
+                <li>
+                    <button type="button" class="bn_blanco" id="colorBlancoAgregar">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="bn_rojo" id="colorRojoAgregar">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="bn_naranja" id="colorNaranjaAgregar">
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="bn_verde" id="colorVerdeAgregar">
+                    </button>
+                </li>
+
+            </ul>
+
+            <button type="submit">
+                Agregar Entrada
+            </button>
+        </form>
+
+
+
+        <button class="boton_cerrar" id="close">❌</button>
+    </dialog>
+
+
+
+
     <main class="contenido_principal">
         <button>Anterior</button>
         <table class="tabla">
@@ -49,7 +99,10 @@
     </main>
     <footer class="footer_pagina_principal">
         <button>Editar</button>
-        <button> Agregar Entrada</button>
+        <button id="botonAgregarEntrada">Agregar Entrada</button>
     </footer>
+
+    <script src="./src/agregarEntrada.js" />
 </body>
+
 </html>
