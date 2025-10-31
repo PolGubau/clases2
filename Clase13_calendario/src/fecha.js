@@ -1,7 +1,8 @@
-import { renderizaCalendario } from "./calendario.js";
+import { renderizarCalendario } from "./calendario.js";
 
 const mes = document.getElementById("mes")
 const anio = document.getElementById("anio")
+
 
 const mesAnteriorNodo = document.getElementById("mesAnterior");
 
@@ -24,18 +25,19 @@ function renderizarFecha() {
   const anioFormateado = formatoAnio.format(fechaHoy)
   mes.textContent = mesFormateado
   anio.textContent = anioFormateado
+
+  renderizarCalendario(fechaHoy)
 }
 
 function mesSiguiente() {
   fechaHoy.setMonth(fechaHoy.getMonth() + 1);
   renderizarFecha()
-  renderizaCalendario(fechaHoy)
+
 }
 
 function mesAnterior() {
   fechaHoy.setMonth(fechaHoy.getMonth() - 1);
   renderizarFecha()
-  renderizaCalendario(fechaHoy)
 }
 
 mesAnteriorNodo.addEventListener("click", mesAnterior)

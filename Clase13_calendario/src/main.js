@@ -26,8 +26,11 @@ closeBtn.addEventListener("click", () => {
 agregarForm.addEventListener("submit", (e) => {
   guardarEntrada(e)
   closeModal()
-})
+});
+
+
 
 // Funciones que se ejecutan al cargar directamente
 cargarColores(colors)
 renderEntradasProvisionales()
+
