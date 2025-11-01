@@ -1,0 +1,24 @@
+.modal_agregar_entrada{
+  border-radius: 10px;
+  background-color: #FFEDC2;
+  color: #4A2C00;
+  width: 500px;
+  height: 400px;
+  padding: 15px;
+
+  .boton_cerrar{
+    background-color: yellow;
+    border-radius: 9999px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+ 
+  form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  
+}
+

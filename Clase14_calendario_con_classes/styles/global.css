@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #FFFBE6;
+    
+}
+
+
+
+.contenido_principal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+     height: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.header_tabla {
+    padding-bottom: 10px;
+    align-items: center;
+    color: #4A2C00;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    h1 {
+        font-size: 2em;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        font-size: 2em;
+        color: #4A2C00;
+        padding: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border-radius: 15px;
+    }
+
+    button:hover {
+        background-color: #FFC87C;
+    }
+
+    .header_mes {
+        /* Para que el mes salga bonito.
+        -Uppercase: todo mayúsculas
+        -Lowercase: todo minúsculas
+        -Capitalize: Pon la primera letra de cada palabra en mayúscula
+        */
+        text-transform: capitalize;
+    }
+}
+
+.tabla {
+    width: 100%;
+    height: 100%;
+    border: 2px #4A2C00 solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px rgb(0, 0, 0) solid;
+        color: #4A2C00;
+    }
+
+    thead th {
+        background-color: #FFA62B;
+        border-bottom: 2px #4A2C00 solid;
+        border-right: 2px #4A2C00 solid;
+        color: #4A2C00;
+    }
+
+    tbody td {
+        background-color: #FFECC7;
+        border-bottom: 1px #4A2C00 solid;
+        border-right: 1px #4A2C00 solid;
+        height: 100px;
+        padding: 5px;
+        vertical-align: top;
+    }
+
+
+
+
+    tbody td:nth-child(6),
+    td:nth-child(7) {
+        background-color: #FFD59E;
+    }
+
+}
+
+.footer_pagina_principal {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+}
+
+
+
+.button {
+    transition: all 0.3s ease-in-out;
+    background-color: #FFC87C;
+    /* color cabecera del calendario */
+    color: #4A2C00;
+    /* texto marrón del calendario */
+    border: 2px solid #FFBF69;
+    /* borde cálido para armonía */
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #813f18f3;
+    /* naranja más intenso */
+    color: #ffffff;
+    /* texto claro para contraste */
+    transform: translateY(-4px);
+    /* efecto “levantado” */
+    box-shadow: 0 4px 8px rgb(255, 102, 0);
+}
+
+.input {
+    width: 100%;
+    /* ancho */
+    font-size: 14px;
+    /* tamaño del texto */
+    padding: 5px;
+    /* espacio interno */
+    border: 2px solid #3498db;
+    /* borde azul */
+    border-radius: 8px;
+    /* esquinas redondeadas */
+}
+
+.invertir {
+    rotate: 180deg;
+}
