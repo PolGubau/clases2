@@ -1,3 +1,4 @@
+import { renderCasilla } from "./calendario/casilla.js"
 
 const calendar = document.getElementById("calendar")
 
@@ -24,7 +25,6 @@ export function renderizarCalendario(fecha) {
 
   const diasEnElMes = new Date(year, mes + 1, 0).getDate()
 
-  console.log("voy a renderizar el calendario")
 
   const cantidadSemanas = 5
   const cantidadDiasEnSemana = 7
@@ -51,17 +51,16 @@ export function renderizarCalendario(fecha) {
       if (previoAlMes || posteriorAlMes) {
         casilla.classList.add("fuera_mes")
       } else {
-        casilla.textContent = dia;
         // 
-        dia = dia + 1;
+        const fecha = new Date(year, mes, dia).toISOString();
+        renderCasilla(casilla, fecha);
+        
+        dia++;
       }
       fila.appendChild(casilla)
     }
     tablaContenido.appendChild(fila)
-    // Esto haría que no renderize más semanas si ya se ha llegado al tope (febrero)
-    // if (dia > diasEnElMes) {
-    //   break
-    // }
+
   }
 
 }
