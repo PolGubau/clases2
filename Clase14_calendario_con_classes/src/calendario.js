@@ -8,11 +8,7 @@ const tablaContenido = calendar.querySelector("tbody")
 
 
 
-
-
 export function renderizarCalendario(fecha) {
-
-
   const year = fecha.getFullYear()
   const mes = fecha.getMonth()
 
@@ -22,14 +18,10 @@ export function renderizarCalendario(fecha) {
   // Fórmula que no hace falta que te sepas, que te da el primer dia de la semana que empieza ese mes
   const startingDay = (diaDeLaSemanaDelPrimerDia + 6) % 7;
 
-
   const diasEnElMes = new Date(year, mes + 1, 0).getDate()
-
 
   const cantidadSemanas = 5
   const cantidadDiasEnSemana = 7
-
-
 
   tablaContenido.innerHTML = "";
 
@@ -37,7 +29,6 @@ export function renderizarCalendario(fecha) {
 
   // CASO 1 = Dia está en ese mes
   // CASO 2 = Ese día es de otro mes
-
 
   for (let i = 0; i < cantidadSemanas; i++) {
     const fila = document.createElement("tr")
@@ -60,7 +51,5 @@ export function renderizarCalendario(fecha) {
       fila.appendChild(casilla)
     }
     tablaContenido.appendChild(fila)
-
   }
-
 }

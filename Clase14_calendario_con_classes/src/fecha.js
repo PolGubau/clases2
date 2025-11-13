@@ -2,10 +2,7 @@ import { renderizarCalendario } from "./calendario.js";
 
 const mes = document.getElementById("mes")
 const anio = document.getElementById("anio")
-
-
 const mesAnteriorNodo = document.getElementById("mesAnterior");
-
 const mesSiguienteNodo = document.getElementById("mesSiguiente");
 
 let fechaHoy = new Date() // fecha actual sin formato

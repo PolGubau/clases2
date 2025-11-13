@@ -2,14 +2,10 @@
 import { agregarEntrada } from "./entradasApi.js"
 
 const inputFechaAgregarEntrada = document.getElementById("inputFechaAgregarEntrada");
-
 const inputTextoAgregarEntrada = document.getElementById("inputTextoAgregarEntrada");
-
 const inputColorAgregarEntrada = document.getElementById("inputColorAgregarEntrada");
 
-
 const agregarForm = document.getElementById("agregarForm");
-
 
 export function guardarEntrada(e) {
   e.preventDefault()
@@ -20,9 +16,4 @@ export function guardarEntrada(e) {
   const entrada = { texto, color, fecha }
   agregarEntrada(entrada)
   agregarForm.reset()
-
 }
-
-
-
-

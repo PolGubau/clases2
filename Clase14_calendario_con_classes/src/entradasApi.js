@@ -1,7 +1,4 @@
-
 const entradasProvisionales = document.getElementById("entradasProvisionales");
-
-
 
 export let arrayEntradas = JSON.parse(localStorage.getItem("entradas-manuales")) || []
 
@@ -16,7 +13,6 @@ const entrada = {nombre:"hola",fecha:"hoy"}
 const [nombre1,nombre2]=nombres
 const {nombre,fecha}=entrada
 */
-
 
 
 export function agregarEntrada(entrada) {
@@ -36,4 +32,3 @@ export function renderEntradasProvisionales() {
     entradasProvisionales.appendChild(li)
   });
 }
-

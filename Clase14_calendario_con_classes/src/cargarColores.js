@@ -8,5 +8,3 @@ export function cargarColores(colors) {
     listaColores.appendChild(option)
   })
 }
- 
-
