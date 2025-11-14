@@ -21,9 +21,12 @@ export function agregarEntrada(entrada) {
 
   localStorage.setItem("entradas-manuales", JSON.stringify(arrayEntradas))
 
-  renderEntradasProvisionales()
+  //renderEntradasProvisionales()
 }
 
+
+/*
+FUNCIÓN PARA CREAR Y MOSTRAR LA LISTA DEBAJO DEL CALENDARIO
 export function renderEntradasProvisionales() {
   entradasProvisionales.innerHTML = "";
   arrayEntradas.forEach(entrada => {
@@ -32,3 +35,4 @@ export function renderEntradasProvisionales() {
     entradasProvisionales.appendChild(li)
   });
 }
+*/
